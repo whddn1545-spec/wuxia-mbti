@@ -112,8 +112,8 @@
 }
 
 .sectionIcon {
-  color: var(--accent-red);
-  filter: drop-shadow(0 0 5px rgba(139, 0, 0, 0.8));
+  color: var(--accent-gold);
+  filter: drop-shadow(0 0 6px rgba(254, 229, 0, 0.5));
 }
 
 .descLine {
