@@ -89,11 +89,31 @@
 
 .descriptionBox {
   background: rgba(255, 255, 255, 0.03);
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 2rem;
   border-radius: 4px;
   margin-bottom: 2rem;
   text-align: left;
   border-left: 4px solid var(--accent-gold);
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--accent-gold);
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 3rem 0 1rem;
+  letter-spacing: 1px;
+}
+
+.sectionTitle:first-child {
+  margin-top: 0;
+}
+
+.sectionIcon {
+  color: var(--accent-red);
+  filter: drop-shadow(0 0 5px rgba(139, 0, 0, 0.8));
 }
 
 .descLine {

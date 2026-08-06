@@ -3,6 +3,7 @@ import styles from './result.module.css';
 import Link from 'next/link';
 import ScrollTransition from '../../../components/ScrollTransition';
 import ShareButtons from '../../../components/ShareButtons';
+import { ScrollText, Eye, Flame, Swords } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -51,10 +52,31 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
             )}
 
             <div className={styles.descriptionBox}>
-              {result.description.map((line, idx) => (
-                <p key={idx} className={styles.descLine}>"{line}"</p>
-              ))}
-            </div>
+            {result.description.map((line, idx) => {
+              if (line === '') return null; // 빈 줄은 스킵하고 CSS margin으로 처리
+              
+              let Icon = null;
+              if (line.includes('천기누설')) Icon = ScrollText;
+              else if (line.includes('심검')) Icon = Eye;
+              else if (line.includes('비급')) Icon = Flame;
+              else if (line.includes('파훼법')) Icon = Swords;
+
+              if (Icon) {
+                return (
+                  <h3 key={idx} className={styles.sectionTitle}>
+                    <Icon size={24} className={styles.sectionIcon} />
+                    {line}
+                  </h3>
+                );
+              }
+
+              return (
+                <p key={idx} className={styles.descLine}>
+                  {line}
+                </p>
+              );
+            })}
+          </div>
             
             <div className={styles.matchBox}>
               <div className={styles.matchItem}>
