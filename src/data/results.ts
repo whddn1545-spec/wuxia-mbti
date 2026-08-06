@@ -19,7 +19,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '아미파', desc: '내 지시를 군말 없이 따르는 충직한 보좌관' },
     worstMatch: { name: '녹림', desc: '규칙 따위 개나 줘버린 통제불능 짐승들 (상극)' },
-    imageUrl: '/images/nangung.jpg'
+    imageUrl: '/images/nangung_mbti_1785998688512.jpg'
   },
   shaolin: {
     id: 'shaolin', name: '소림사', subtitle: '융통성 제로의 바른생활 머신',
@@ -43,7 +43,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '하북팽가', desc: '내 말에 껌뻑 죽는 단순무식 불도저 (장기말)' },
     worstMatch: { name: '사천당가', desc: '내 가스라이팅이 전혀 안 통하는 소시오패스' },
-    imageUrl: '/images/murong.jpg'
+    imageUrl: '/images/murong_mbti_1785998697529.jpg'
   },
   wudang: {
     id: 'wudang', name: '무당파', subtitle: '속을 알 수 없는 맑은 눈의 광인',
@@ -55,7 +55,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '사천당가', desc: '서로 선 안 넘고 깔끔하게 존중함 (비즈니스 파트너)' },
     worstMatch: { name: '화산파', desc: '옆에서 계속 나대는 거 보면 단전에서 빡침이 올라옴' },
-    imageUrl: '/images/wudang.jpg'
+    imageUrl: '/images/wudang_mbti_1785998706356.jpg'
   },
   mount_hua: {
     id: 'mount_hua', name: '화산파', subtitle: '"폼에 살고 폼에 죽는다" 관종 검객',
@@ -67,7 +67,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '하오문', desc: '서로 헛소리 티키타카 개잘맞음 (의형제)' },
     worstMatch: { name: '무당파', desc: '내 개그에 정색하는 노잼 도사님' },
-    imageUrl: '/images/mount_hua.jpg'
+    imageUrl: '/images/mount_hua_mbti_1785998717250.jpg'
   },
   beggar: {
     id: 'beggar', name: '개방', subtitle: '"세상은 내 친구!" 극강의 욜로 거지',
@@ -91,7 +91,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '남궁세가', desc: '나를 든든하게 보호해줄 완벽한 방패' },
     worstMatch: { name: '마교', desc: '예측 불가능한 미친놈들이라 상종하기 싫음' },
-    imageUrl: '/images/emei.jpg'
+    imageUrl: '/images/emei_mbti_1785998727072.jpg'
   },
   diancang: {
     id: 'diancang', name: '점창파', subtitle: '"아싸가 체질" 마이웨이 독고다이',
@@ -103,7 +103,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '곤륜파', desc: '각자 방구석에서 한마디도 안 하고 같이 놀 수 있음' },
     worstMatch: { name: '표국', desc: '쓸데없는 오지랖 부리면서 자꾸 말 걸어서 짜증남' },
-    imageUrl: '/images/diancang.jpg'
+    imageUrl: '/images/diancang_mbti_1785998738331.jpg'
   },
   peng: {
     id: 'peng', name: '하북팽가', subtitle: '브레이크 박살 난 불도저',
@@ -115,7 +115,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '모용세가', desc: '내 사고를 완벽하게 수습해주는 브레인' },
     worstMatch: { name: '제갈세가', desc: '생각만 많고 행동 굼뜬 애들 보면 속 터짐' },
-    imageUrl: '/images/peng.jpg'
+    imageUrl: '/images/peng_mbti_1785998748165.jpg'
   },
   merchant: {
     id: 'merchant', name: '표국', subtitle: '"밥은 먹고 다니냐?" 오지랖퍼',
@@ -127,7 +127,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '장강수로채', desc: '내 호의를 진심으로 고마워하는 으리으리한 녀석' },
     worstMatch: { name: '점창파', desc: '내가 챙겨줘도 쌩까서 상처받음' },
-    imageUrl: '/images/merchant.jpg'
+    imageUrl: '/images/merchant_mbti_1785998756825.jpg'
   },
   zhuge: {
     id: 'zhuge', name: '제갈세가', subtitle: '"다 내 계산대로야" 킹메이커',
@@ -139,7 +139,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '마교', desc: '내 미친 계획을 그대로 실행해 줄 압도적 무력' },
     worstMatch: { name: '개방', desc: '통제도 안 되고 계획도 없는 무쓸모 잉여' },
-    imageUrl: '/images/zhuge.jpg'
+    imageUrl: '/images/zhuge_mbti_1785998765999.jpg'
   },
   tang: {
     id: 'tang', name: '사천당가', subtitle: '"그래서 결론이 뭔데?" 가성비 암살자',
@@ -163,7 +163,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '제갈세가', desc: '나의 비전을 현실로 만들어줄 훌륭한 참모' },
     worstMatch: { name: '아미파', desc: '도덕과 규율만 따지는 한심한 위선자들' },
-    imageUrl: '/images/demonic.jpg'
+    imageUrl: ''
   },
   green_forest: {
     id: 'green_forest', name: '녹림', subtitle: '방구석 여포, 귀차니즘 산적',
@@ -175,7 +175,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '표국', desc: '귀찮은 날 대신해서 다 챙겨주는 마더 테레사' },
     worstMatch: { name: '남궁세가', desc: '숨쉬는 것까지 통제하려 드는 극혐 꼰대' },
-    imageUrl: '/images/green_forest.jpg'
+    imageUrl: ''
   },
   haomen: {
     id: 'haomen', name: '하오문', subtitle: '아가리로 무림통일, 프로 팩폭러',
@@ -199,6 +199,6 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '점창파', desc: '각자 알아서 놀아서 너무 편함' },
     worstMatch: { name: '하북팽가', desc: '가만히 있는 날 자꾸 흔들어 깨워서 미치겠음' },
-    imageUrl: '/images/kunlun.jpg'
+    imageUrl: ''
   }
 };
