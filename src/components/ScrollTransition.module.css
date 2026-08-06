@@ -4,8 +4,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none; /* 클릭 방해 안 함 */
-  z-index: 9999;
+  pointer-events: none;
+  z-index: 99999;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -14,12 +14,16 @@
 .scrollHalf {
   width: 100%;
   height: 50vh;
-  background-color: #e8dcc4; /* 오래된 종이 색상 */
-  background-image: url('https://www.transparenttextures.com/patterns/rice-paper-2.png'); /* 한지 텍스처 */
+  /* 대작 게임 스타일의 다크 판타지 두루마리 질감 (고급스러운 실크/어두운 종이 느낌) */
+  background: radial-gradient(circle at center, #2b2520, #0a0807);
+  background-image: 
+    url('https://www.transparenttextures.com/patterns/black-paper.png'),
+    linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0.8) 100%);
   position: relative;
-  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1); /* 묵직하게 쫙 열리는 느낌 */
+  /* 묵직하고 시네마틱한 이징 커브 적용 */
+  transition: transform 1.5s cubic-bezier(0.85, 0, 0.15, 1);
   display: flex;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  box-shadow: 0 0 100px rgba(0,0,0,1);
 }
 
 .scrollHalfTop {
@@ -40,21 +44,56 @@
   transform: translateY(100%);
 }
 
-/* 두루마리의 나무 축(막대) 디자인 */
-.scrollPoleBottom {
+/* 대형 두루마리 축 (압도적인 크기와 메탈릭 렌더링 효과) */
+.scrollPoleBottom, .scrollPoleTop {
   width: 100%;
-  height: 25px;
-  background: linear-gradient(to bottom, #8b0000, #5a0000); /* 붉은색 나무 축 */
-  border-top: 2px solid #d4af37; /* 금색 장식 */
-  border-bottom: 2px solid #330000;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  height: 80px; /* 기존보다 3배 이상 키워서 거대한 축 느낌 부여 */
+  /* 실제 원통형 나무/금속 축처럼 보이도록 입체적인 그라데이션 */
+  background: linear-gradient(to bottom, #111 0%, #3a0000 30%, #8b0000 50%, #3a0000 70%, #111 100%);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.9), inset 0 0 30px rgba(0,0,0,0.8);
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .scrollPoleTop {
+  background: linear-gradient(to top, #111 0%, #3a0000 30%, #8b0000 50%, #3a0000 70%, #111 100%);
+}
+
+/* 금박 테두리 효과 */
+.scrollPoleBottom::before, .scrollPoleTop::before {
+  content: '';
+  position: absolute;
   width: 100%;
-  height: 25px;
-  background: linear-gradient(to top, #8b0000, #5a0000);
-  border-bottom: 2px solid #d4af37;
-  border-top: 2px solid #330000;
-  box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
+  height: 100%;
+  border-top: 4px solid #d4af37;
+  border-bottom: 4px solid #8a7322;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+
+/* 두루마리가 닫힐 때 중앙에 합쳐지는 거대한 옥쇄/문양 (상단 절반) */
+.sealTop, .sealBottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 80px; /* 전체 160x160의 절반 */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Yin_and_Yang.svg/1024px-Yin_and_Yang.svg.png'); /* 임시 멋진 태극/무림 문양 */
+  background-size: 160px 160px;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.8)) sepia(1) hue-rotate(10deg) saturate(3);
+  z-index: 2;
+}
+
+.sealTop {
+  bottom: 0;
+  background-position: top center; /* 윗부분 렌더링 */
+  border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+}
+
+.sealBottom {
+  top: 0;
+  background-position: bottom center; /* 아랫부분 렌더링 */
+  border-top: 2px solid rgba(212, 175, 55, 0.5);
 }

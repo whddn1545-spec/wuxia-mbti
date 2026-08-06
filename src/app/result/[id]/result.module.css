@@ -1,3 +1,4 @@
+/* 기존 내용 유지하되, 이미지가 없을 때의 placeholder 스타일 추가 */
 .main {
   flex: 1;
   display: flex;
@@ -52,6 +53,22 @@
   border: 1px solid var(--border-color);
   margin-bottom: 2rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.placeholderImage {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  margin: 0 auto 2rem;
+  background: rgba(0,0,0,0.5);
+  border: 1px dashed var(--accent-gold);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  font-weight: 700;
+  opacity: 0.7;
 }
 
 .descriptionBox {

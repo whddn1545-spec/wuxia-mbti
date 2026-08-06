@@ -15,7 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     openGraph: {
       title: `내 안의 본성: ${result.name}`,
       description: result.subtitle,
-      images: [result.imageUrl || 'https://www.transparenttextures.com/patterns/black-paper.png'],
+      // 실제 존재하는 이미지만 OG에 반영
+      images: [result.imageUrl && result.imageUrl.includes('178') ? result.imageUrl : 'https://www.transparenttextures.com/patterns/black-paper.png'],
     },
   };
 }
@@ -28,6 +29,9 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
     return <div style={{color: 'white', padding: '2rem'}}>결과를 찾을 수 없습니다.</div>;
   }
 
+  // 아직 이미지가 생성되지 않은 문파는 엑스박스 방지
+  const hasValidImage = result.imageUrl && result.imageUrl.includes('178');
+
   return (
     <>
       <ScrollTransition />
@@ -37,8 +41,12 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
             <h2 className={styles.subtitle}>{result.subtitle}</h2>
             <h1 className={styles.title}>[{result.name}]</h1>
             
-            {result.imageUrl && (
+            {hasValidImage ? (
               <img src={result.imageUrl} alt={result.name} className={styles.image} />
+            ) : (
+              <div className={styles.placeholderImage}>
+                <span>{result.name} 호패 각인 중...</span>
+              </div>
             )}
 
             <div className={styles.descriptionBox}>
