@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📜 무림 성향 팩폭 테스트 (Wuxia MBTI Test)
 
-## Getting Started
+> *"당신의 영혼에 깃든 진정한 무림 문파를 찾아드립니다."*
 
-First, run the development server:
+## 🌟 프로젝트 소개
+스토리텔링형 심리테스트를 통해 사용자의 성향을 16개의 무림 문파 중 하나로 매칭해주는 **반응형 웹 애플리케이션**입니다. 
+단순한 질문의 나열이 아닌, 한 편의 무협지 주인공이 되어 겪는 4개의 챕터(강호 출두~천하제일인)를 통해 엄청난 몰입감을 제공합니다.
+
+## ✨ 주요 기능
+- **스토리텔링형 UI/UX**: 무림 서사 기반의 과몰입형 팩폭 문항 (총 20문항).
+- **시네마틱 애니메이션**: 대작 게임 퀄리티의 '거대 두루마리(Scroll) 트랜지션' 연출 기법 적용.
+- **자체 상태 관리 로직 (Zustand)**: 4가지 성향 축(명분/실리, 규율/자유, 돌파/은밀, 강경/온건) 기반 실시간 점수 합산 알고리즘.
+- **소셜 공유 최적화 (OG Tags)**: 카카오톡 등 SNS 공유 시, 내 결과 문파의 일러스트와 설명이 동적으로 렌더링되는 시스템 구축.
+- **16개 문파 매칭 및 상성**: 소림사, 하오문, 남궁세가 등 16개 문파와 '영혼의 단짝 / 상극 천적' 조합 제공.
+
+## 🛠 기술 스택
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **State Management**: Zustand
+- **Styling**: Vanilla CSS (CSS Modules)
+
+## 🚀 실행 방법
 
 ```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*접속: http://localhost:3000*
