@@ -5,7 +5,14 @@
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
+  /* 배경을 펼쳐진 두루마리 내부처럼 구현 (다크 실크 + 그림자) */
+  background: radial-gradient(circle at center, #2b2520, #0a0807);
+  background-image: 
+    url('https://www.transparenttextures.com/patterns/black-paper.png'),
+    linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0.8) 100%);
+  border-left: 8px solid #3a0000;
+  border-right: 8px solid #3a0000;
+  box-shadow: inset 30px 0 40px rgba(0,0,0,0.9), inset -30px 0 40px rgba(0,0,0,0.9);
   position: relative;
   min-height: 100vh;
 }
@@ -16,13 +23,13 @@
   left: 0;
   width: 100%;
   height: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   z-index: 10;
 }
 
 .progressBar {
   height: 100%;
-  background: var(--accent-red);
+  background: linear-gradient(90deg, #8b0000, #d4af37);
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -32,13 +39,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 0.5s ease-out forwards;
   padding: 2rem 0;
+  /* 두루마리가 열릴 때까지 내용물 숨기기 (1.2초 대기 후 페이드인) */
+  opacity: 0;
+  animation: scrollContentFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 1.2s; 
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes scrollContentFadeIn {
+  from { opacity: 0; transform: scale(0.95); filter: blur(10px); }
+  to { opacity: 1; transform: scale(1); filter: blur(0); }
 }
 
 .chapter {
@@ -50,16 +60,16 @@
 }
 
 .questionBox {
-  background: rgba(13, 13, 18, 0.85);
-  border: 1px solid var(--border-color);
+  background: rgba(13, 13, 18, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   padding: 3.5rem 2rem 2.5rem;
-  border-radius: 8px;
+  border-radius: 4px;
   width: 100%;
   margin-bottom: 3rem;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
   position: relative;
   text-align: center;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 }
 
 .qMark {
@@ -68,20 +78,20 @@
   left: 50%;
   transform: translateX(-50%);
   background: var(--bg-color);
-  color: var(--accent-red);
+  color: var(--accent-gold);
   font-size: 2rem;
   font-weight: 900;
   padding: 0 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--accent-gold);
   border-radius: 4px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.8);
 }
 
 .questionText {
   font-size: 1.5rem;
   line-height: 1.6;
   font-weight: 900;
-  color: #ffffff; /* 질문 텍스트 밝게 유지 */
+  color: #ffffff;
   word-break: keep-all;
 }
 
@@ -93,15 +103,14 @@
 }
 
 .answerButton {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   padding: 1.3rem 1.5rem;
   border-radius: 4px;
-  /* 가독성 100%를 위한 밝은 흰색 및 적당한 굵기 */
   color: #ffffff; 
   font-family: inherit;
   font-size: 1.2rem; 
-  font-weight: 500; /* 너무 두껍지도, 얇지도 않은 최적의 굵기 */
+  font-weight: 500;
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -122,31 +131,14 @@
 .answerButton:hover {
   background: rgba(212, 175, 55, 0.15);
   border-color: var(--accent-gold);
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transform: translateX(5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-/* 모바일 반응형 최적화 */
 @media (max-width: 600px) {
-  .questionBox {
-    padding: 2.5rem 1.2rem 1.5rem;
-  }
-  
-  .qMark {
-    font-size: 1.8rem;
-    top: -22px;
-  }
-
-  .questionText {
-    font-size: 1.25rem;
-  }
-
-  .answerButton {
-    padding: 1.1rem 1rem;
-    font-size: 1.05rem;
-  }
-  
-  .answerNumber {
-    font-size: 1.1rem;
-  }
+  .questionBox { padding: 2.5rem 1.2rem 1.5rem; }
+  .qMark { font-size: 1.8rem; top: -22px; }
+  .questionText { font-size: 1.25rem; }
+  .answerButton { padding: 1.1rem 1rem; font-size: 1.05rem; }
+  .answerNumber { font-size: 1.1rem; }
 }

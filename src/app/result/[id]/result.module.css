@@ -1,33 +1,43 @@
-/* 기존 내용 유지하되, 이미지가 없을 때의 placeholder 스타일 추가 */
 .main {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
-  background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
+  /* 배경을 펼쳐진 두루마리 내부처럼 구현 */
+  background: radial-gradient(circle at center, #2b2520, #0a0807);
+  background-image: 
+    url('https://www.transparenttextures.com/patterns/black-paper.png'),
+    linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0.8) 100%);
+  border-left: 8px solid #3a0000;
+  border-right: 8px solid #3a0000;
+  box-shadow: inset 30px 0 40px rgba(0,0,0,0.9), inset -30px 0 40px rgba(0,0,0,0.9);
+  min-height: 100vh;
 }
 
 .container {
   max-width: 600px;
   width: 100%;
-  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  animation: scrollContentFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 1.2s; /* 두루마리가 열린 후 콘텐츠 등장 */
 }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes scrollContentFadeIn {
+  from { opacity: 0; transform: scale(0.95); filter: blur(10px); }
+  to { opacity: 1; transform: scale(1); filter: blur(0); }
 }
 
 .hopae {
-  background: rgba(13, 13, 18, 0.95);
+  background: rgba(13, 13, 18, 0.8);
   border: 2px solid var(--accent-gold);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 3rem 2rem;
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.8), inset 0 0 40px rgba(212, 175, 55, 0.08);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.9), inset 0 0 40px rgba(212, 175, 55, 0.1);
   position: relative;
   margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
 }
 
 .subtitle {
@@ -42,33 +52,35 @@
   font-size: 3rem;
   font-weight: 900;
   margin-bottom: 2rem;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 10px rgba(212, 175, 55, 0.5);
 }
 
 .image {
   width: 100%;
   max-width: 300px;
   height: auto;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  border: 2px solid var(--accent-gold);
   margin-bottom: 2rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
 }
 
 .placeholderImage {
   width: 100%;
   max-width: 300px;
-  height: 300px;
+  height: 400px;
   margin: 0 auto 2rem;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   border: 1px dashed var(--accent-gold);
-  border-radius: 8px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--accent-gold);
   font-weight: 700;
-  opacity: 0.7;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
 }
 
 .descriptionBox {
@@ -77,6 +89,7 @@
   border-radius: 4px;
   margin-bottom: 2rem;
   text-align: left;
+  border-left: 3px solid var(--accent-gold);
 }
 
 .descLine {
@@ -99,27 +112,27 @@
 .matchItem {
   display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 1.2rem;
   border-radius: 4px;
 }
 
 .matchTitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--accent-gold);
   margin-bottom: 0.5rem;
 }
 
 .matchName {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #fff;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 0.3rem;
 }
 
 .matchDesc {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text-secondary);
 }
 
@@ -148,15 +161,16 @@
 
 .shareButton:hover {
   background: #f4dc00;
+  transform: scale(1.02);
 }
 
 .retryButton {
-  background: transparent;
-  color: var(--text-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0,0,0,0.5);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
 }
 
 .retryButton:hover {
+  background: rgba(212, 175, 55, 0.1);
   color: #fff;
-  border-color: #fff;
 }

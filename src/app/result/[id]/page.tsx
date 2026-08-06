@@ -70,7 +70,7 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
           </div>
 
           <div className={styles.actionButtons}>
-            <button className={styles.shareButton} onClick={() => {}}>
+            <button className={styles.shareButton}>
               카카오톡으로 팩폭 날리기
             </button>
             <Link href="/" className={styles.retryButton}>
