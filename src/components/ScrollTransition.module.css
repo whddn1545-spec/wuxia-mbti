@@ -1,0 +1,60 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* 클릭 방해 안 함 */
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scrollHalf {
+  width: 100%;
+  height: 50vh;
+  background-color: #e8dcc4; /* 오래된 종이 색상 */
+  background-image: url('https://www.transparenttextures.com/patterns/rice-paper-2.png'); /* 한지 텍스처 */
+  position: relative;
+  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1); /* 묵직하게 쫙 열리는 느낌 */
+  display: flex;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+.scrollHalfTop {
+  transform: translateY(0);
+  align-items: flex-end;
+}
+
+.scrollHalfBottom {
+  transform: translateY(0);
+  align-items: flex-start;
+}
+
+.openTop {
+  transform: translateY(-100%);
+}
+
+.openBottom {
+  transform: translateY(100%);
+}
+
+/* 두루마리의 나무 축(막대) 디자인 */
+.scrollPoleBottom {
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(to bottom, #8b0000, #5a0000); /* 붉은색 나무 축 */
+  border-top: 2px solid #d4af37; /* 금색 장식 */
+  border-bottom: 2px solid #330000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.scrollPoleTop {
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(to top, #8b0000, #5a0000);
+  border-bottom: 2px solid #d4af37;
+  border-top: 2px solid #330000;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
+}
