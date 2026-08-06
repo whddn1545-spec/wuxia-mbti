@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title: `내 안의 본성: ${result.name}`,
       description: result.subtitle,
       // 실제 존재하는 이미지만 OG에 반영
-      images: [result.imageUrl && result.imageUrl.includes('178') ? result.imageUrl : 'https://www.transparenttextures.com/patterns/black-paper.png'],
+      images: [result.imageUrl ? result.imageUrl : 'https://www.transparenttextures.com/patterns/black-paper.png'],
     },
   };
 }
@@ -31,8 +31,8 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
     return <div style={{color: 'white', padding: '2rem'}}>결과를 찾을 수 없습니다.</div>;
   }
 
-  // 아직 이미지가 생성되지 않은 문파는 엑스박스 방지
-  const hasValidImage = result.imageUrl && result.imageUrl.includes('178');
+  // 아직 이미지가 등록되지 않은(빈 문자열) 문파만 엑스박스 방지
+  const hasValidImage = Boolean(result.imageUrl);
 
   return (
     <>
