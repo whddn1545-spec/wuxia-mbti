@@ -38,7 +38,7 @@ export default function TestPage() {
   return (
     <>
       <ScrollTransition isClosing={isClosing} onCloseComplete={handleCloseComplete} />
-      <main className={styles.main}>
+      <main className={`${styles.main} ${isClosing ? styles.fadeOut : ''}`}>
         <div className={styles.progressBarContainer}>
           <div className={styles.progressBar} style={{ width: `${progress}%` }}></div>
         </div>
