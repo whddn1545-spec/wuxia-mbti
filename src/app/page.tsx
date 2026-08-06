@@ -9,7 +9,7 @@ export default function Home() {
         <h1 className={styles.title}>무림 성향 팩폭 테스트</h1>
         <div className={styles.divider}></div>
         <p className={styles.description}>
-          50개의 뼈 때리는 질문들.<br/>
+          20개의 뼈 때리는 질문들.<br/>
           당신은 정파의 영웅인가, 마교의 폭군인가, 아니면 뒷골목 사기꾼인가?
         </p>
         <Link href="/test" className={styles.startButton}>
