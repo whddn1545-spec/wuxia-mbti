@@ -9,14 +9,16 @@ import { useRouter } from 'next/navigation';
 import ScrollTransition from '../../components/ScrollTransition';
 
 export default function TestPage() {
-  const { currentIndex, answerQuestion, scores } = useTestStore();
+  const { currentIndex, answerQuestion, scores, resetTest } = useTestStore();
   const [mounted, setMounted] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
+    // 테스트 진입 시 항상 초기화 (이전 세션의 점수/진행도가 남아 재응시가 즉시 결과로 튕기는 버그 방지)
+    resetTest();
     setMounted(true);
-  }, []);
+  }, [resetTest]);
 
   useEffect(() => {
     // 모든 문항을 다 풀었을 때 닫히는 애니메이션 트리거

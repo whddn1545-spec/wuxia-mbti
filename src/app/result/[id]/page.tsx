@@ -11,14 +11,23 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   
   if (!result) return { title: '무림 성향 팩폭 테스트' };
 
+  // OG 전용 압축본(/images/og/<id>.jpg, ~200KB) 사용 — 원본 PNG(2~3MB)는 카톡 미리보기에서 렌더 실패 위험
+  const ogImage = { url: `/images/og/${id}.jpg`, width: 900, height: 1200, alt: result.name };
+
   return {
     title: `내 안의 본성: ${result.name} | 무림 성향 테스트`,
     description: result.subtitle,
     openGraph: {
       title: `내 안의 본성: ${result.name}`,
       description: result.subtitle,
-      // 실제 존재하는 이미지만 OG에 반영
-      images: [result.imageUrl ? result.imageUrl : 'https://www.transparenttextures.com/patterns/black-paper.png'],
+      type: 'website',
+      images: [ogImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `내 안의 본성: ${result.name}`,
+      description: result.subtitle,
+      images: [ogImage.url],
     },
   };
 }

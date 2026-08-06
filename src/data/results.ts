@@ -322,7 +322,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '화산파', desc: '서로 헛소리 티키타카로 밤새 놀 수 있는 환상의 돌아이 짝꿍' },
     worstMatch: { name: '소림사', desc: '농담도 안 통하고 도덕책 같은 소리만 늘어놓는 숨막히는 꼰대' },
-    imageUrl: '/images/haomen_entp_spy_1785995860587.jpg'
+    imageUrl: '/images/15_하오문.png'
   },
   kunlun: {
     id: 'kunlun', name: '곤륜파', subtitle: '"구름 위를 걷는 외로운 신선"',
@@ -343,6 +343,6 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '점창파', desc: '말 안 해도 내 고독을 이해해주고 서로 터치 안 해서 너무 편함' },
     worstMatch: { name: '하북팽가', desc: '가만히 있는 날 자꾸 흔들어 깨우고 소리 질러서 기 빨려 죽을 것 같음' },
-    imageUrl: ''
+    imageUrl: '/images/16_곤륜파.png'
   }
 };

@@ -210,3 +210,22 @@
   background: rgba(212, 175, 55, 0.1);
   color: #fff;
 }
+
+/* 모바일 환경 최적화: 가로 폭 확장 */
+@media (max-width: 600px) {
+  .main {
+    padding: 1rem 0.5rem;
+  }
+  .hopae {
+    padding: 2rem 1rem;
+  }
+  .descriptionBox {
+    padding: 1.5rem 1rem;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .matchItem {
+    padding: 1rem;
+  }
+}
