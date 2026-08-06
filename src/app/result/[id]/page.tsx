@@ -2,6 +2,7 @@ import { factionResults } from '../../../data/results';
 import styles from './result.module.css';
 import Link from 'next/link';
 import ScrollTransition from '../../../components/ScrollTransition';
+import ShareButtons from '../../../components/ShareButtons';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -69,14 +70,7 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
             </div>
           </div>
 
-          <div className={styles.actionButtons}>
-            <button className={styles.shareButton}>
-              카카오톡으로 팩폭 날리기
-            </button>
-            <Link href="/" className={styles.retryButton}>
-              다시 테스트하기
-            </Link>
-          </div>
+          <ShareButtons factionName={result.name} />
         </div>
       </main>
     </>
