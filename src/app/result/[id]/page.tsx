@@ -3,7 +3,7 @@ import styles from './result.module.css';
 import Link from 'next/link';
 import ScrollTransition from '../../../components/ScrollTransition';
 import ShareButtons from '../../../components/ShareButtons';
-import { ScrollText, Eye, Flame, Swords } from 'lucide-react';
+import { ScrollText, Eye, Flame, Swords, Users, Skull } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -80,14 +80,20 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
             
             <div className={styles.matchBox}>
               <div className={styles.matchItem}>
-                <span className={styles.matchTitle}>🤝 영혼의 단짝</span>
-                <span className={styles.matchName}>{result.bestMatch.name}</span>
-                <span className={styles.matchDesc}>{result.bestMatch.desc}</span>
+                <h4>
+                  <Users size={20} className={styles.matchIcon} />
+                  천생연분 (天生緣分)
+                </h4>
+                <div className={styles.matchName}>{result.bestMatch.name}</div>
+                <p className={styles.matchDesc}>{result.bestMatch.desc}</p>
               </div>
               <div className={styles.matchItem}>
-                <span className={styles.matchTitle}>🥶 상극 천적</span>
-                <span className={styles.matchName}>{result.worstMatch.name}</span>
-                <span className={styles.matchDesc}>{result.worstMatch.desc}</span>
+                <h4>
+                  <Skull size={20} className={styles.matchIcon} />
+                  철천지원수 (徹天之怨讐)
+                </h4>
+                <div className={styles.matchName}>{result.worstMatch.name}</div>
+                <p className={styles.matchDesc}>{result.worstMatch.desc}</p>
               </div>
             </div>
           </div>
