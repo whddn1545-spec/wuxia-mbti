@@ -28,7 +28,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '아미파', desc: '내 지시를 찰떡같이 이해하고 따르는 완벽한 보좌관' },
     worstMatch: { name: '녹림', desc: '룰도 계획도 없이 무지성으로 사는 짐승들' },
-    imageUrl: '/images/nangung_mbti_1785998688512.jpg'
+    imageUrl: '/images/01_남궁세가.png'
   },
   shaolin: {
     id: 'shaolin', name: '소림사', subtitle: '"세상을 지탱하는 거대한 기둥"',
@@ -49,7 +49,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '개방', desc: '으이구 인간아 하면서 은근히 챙겨주게 되는 꿀단지' },
     worstMatch: { name: '하오문', desc: '원칙 따위 무시하고 입만 산 사기꾼들' },
-    imageUrl: '/images/shaolin_istj_monk_1785995851369.jpg'
+    imageUrl: '/images/02_소림사.png'
   },
   murong: {
     id: 'murong', name: '모용세가', subtitle: '"강호를 설계하는 은빛 성좌"',
@@ -70,7 +70,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '하북팽가', desc: '내 말에 껌뻑 죽어주며 돌격하는 든든한 행동대장' },
     worstMatch: { name: '사천당가', desc: '내 감성팔이와 가스라이팅이 1도 안 통하는 소시오패스' },
-    imageUrl: '/images/murong_mbti_1785998697529.jpg'
+    imageUrl: '/images/03_모용세가.png'
   },
   wudang: {
     id: 'wudang', name: '무당파', subtitle: '"태극을 품은 맑은 눈의 광인"',
@@ -91,7 +91,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '사천당가', desc: '서로 선 안 넘고 깔끔하게 존중하는 최고의 비즈니스 파트너' },
     worstMatch: { name: '화산파', desc: '옆에서 시끄럽게 계속 나대는 꼴을 보면 단전에서 빡침이 옴' },
-    imageUrl: '/images/wudang_mbti_1785998706356.jpg'
+    imageUrl: '/images/04_무당파.png'
   },
   mount_hua: {
     id: 'mount_hua', name: '화산파', subtitle: '"전장을 무대로 만드는 화려한 매화"',
@@ -112,7 +112,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '하오문', desc: '서로 헛소리 티키타카 개잘맞는 환상의 짝꿍' },
     worstMatch: { name: '무당파', desc: '내 화려한 개그와 드립에 매번 정색하는 노잼 꼰대' },
-    imageUrl: '/images/mount_hua_mbti_1785998717250.jpg'
+    imageUrl: '/images/05_화산파.png'
   },
   beggar: {
     id: 'beggar', name: '개방', subtitle: '"바람을 벗 삼는 낭만주의자"',
@@ -133,7 +133,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '소림사', desc: '칠칠맞은 나를 챙겨주는 츤데레 잔소리꾼이라 편함' },
     worstMatch: { name: '제갈세가', desc: '"너 플랜B는 뭐야?" 물어볼 때마다 숨 막혀 미치겠음' },
-    imageUrl: '/images/beggar_enfp_friend_1785995880691.jpg'
+    imageUrl: '/images/06_개방.png'
   },
   emei: {
     id: 'emei', name: '아미파', subtitle: '"내 사람을 지키는 헌신적인 수호자"',
@@ -154,7 +154,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '남궁세가', desc: '불안한 나를 든든하게 이끌어줄 완벽하고 거대한 방패' },
     worstMatch: { name: '마교', desc: '예측 불가능하게 날뛰는 미친놈들이라 엮이는 것 자체가 혐오' },
-    imageUrl: '/images/emei_mbti_1785998727072.jpg'
+    imageUrl: '/images/07_아미파.png'
   },
   diancang: {
     id: 'diancang', name: '점창파', subtitle: '"검과 고독을 사랑하는 고고한 천재"',
@@ -175,7 +175,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '곤륜파', desc: '각자 방구석에서 한마디도 안 하고 같이 놀 수 있는 편안함' },
     worstMatch: { name: '표국', desc: '쓸데없는 오지랖 부리면서 자꾸 선 넘고 말 걸어서 뚝배기 깨고 싶음' },
-    imageUrl: '/images/diancang_mbti_1785998738331.jpg'
+    imageUrl: '/images/08_점창파.png'
   },
   peng: {
     id: 'peng', name: '하북팽가', subtitle: '"천하를 호령하는 맹렬한 야수"',
@@ -196,7 +196,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '모용세가', desc: '내가 친 대형 사고를 완벽하게 수습해주는 똑똑한 브레인' },
     worstMatch: { name: '제갈세가', desc: '생각만 많고 행동 안 하는 샌님들 보면 내 속이 터져서 못 버팀' },
-    imageUrl: '/images/peng_mbti_1785998748165.jpg'
+    imageUrl: '/images/09_하북팽가.png'
   },
   merchant: {
     id: 'merchant', name: '표국', subtitle: '"사람의 마음을 잇는 인맥의 제왕"',
@@ -217,7 +217,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '장강수로채', desc: '내 호의를 진심으로 고마워하고 의리를 갚는 듬직한 동생' },
     worstMatch: { name: '점창파', desc: '기껏 챙겨줘도 쌩까고 무시해서 밤에 이불 덮고 즙 짬' },
-    imageUrl: '/images/merchant_mbti_1785998756825.jpg'
+    imageUrl: '/images/10_표국.png'
   },
   zhuge: {
     id: 'zhuge', name: '제갈세가', subtitle: '"천하를 체스판처럼 다루는 신산(神算)"',
@@ -238,7 +238,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '마교', desc: '내 미친 계획을 한 치의 오차 없이 실행해 줄 압도적인 무력' },
     worstMatch: { name: '개방', desc: '통제도 안 되고 계획도 없는 무지성 잉여 집단' },
-    imageUrl: '/images/zhuge_mbti_1785998765999.jpg'
+    imageUrl: '/images/11_제갈세가.png'
   },
   tang: {
     id: 'tang', name: '사천당가', subtitle: '"어둠 속에서 피어나는 서늘한 칼날"',
@@ -259,7 +259,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '무당파', desc: '서로 선 안 넘고 깔끔하게 존중하는 최상급 비즈니스 파트너' },
     worstMatch: { name: '표국', desc: '귀찮게 밥 먹었냐고 계속 오지랖 부려서 내 에너지를 갉아먹음' },
-    imageUrl: '/images/tang_istp_assassin_1785995870024.jpg'
+    imageUrl: '/images/12_사천당가.png'
   },
   demonic: {
     id: 'demonic', name: '천마신교', subtitle: '"세상을 꿇릴 절대적인 폭군"',
@@ -280,7 +280,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '제갈세가', desc: '나의 거대한 비전을 현실로 만들어줄 똑똑하고 쓸모 있는 참모' },
     worstMatch: { name: '아미파', desc: '도덕과 규율만 따지는 답답하고 한심한 나약한 위선자들' },
-    imageUrl: ''
+    imageUrl: '/images/13_천마신교.png'
   },
   green_forest: {
     id: 'green_forest', name: '녹림', subtitle: '"바람처럼 얽매이지 않는 자유로운 혼"',
@@ -301,7 +301,7 @@ export const factionResults: Record<string, FactionResult> = {
     ],
     bestMatch: { name: '표국', desc: '귀찮은 날 대신해서 일상생활을 챙겨주고 떠먹여주는 마더 테레사' },
     worstMatch: { name: '남궁세가', desc: '숨쉬는 것까지 룰을 정해서 통제하려 드는 극혐 꼰대 사령관' },
-    imageUrl: ''
+    imageUrl: '/images/14_녹림.png'
   },
   haomen: {
     id: 'haomen', name: '하오문', subtitle: '"어둠 속의 지배자, 강호의 눈과 귀"',
