@@ -107,7 +107,7 @@ export default async function ResultPage({ params }: { params: Promise<{ id: str
             </div>
           </div>
 
-          <ShareButtons factionName={result.name} />
+          <ShareButtons factionId={result.id} factionName={result.name} subtitle={result.subtitle} />
         </div>
       </main>
     </>
